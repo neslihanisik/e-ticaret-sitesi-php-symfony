@@ -1,0 +1,57 @@
+
+
+                                        <form role="form" method="post">
+                                        <div>
+                                             <select name="product[category_id]" class="form-control">
+                                             {% if (catname) %}
+                                                 <option value=" {{ product.categoryid }}"  >  {{catname[0].title}}  </option>
+                                               {% endif %}
+
+                                                <option value="0">Ana Kategori</option>
+                                                {% for cat in catlist %}
+                                                <option value="{{ cat.id }}">{{ cat.title }}</option>
+                                                {% endfor %}
+                                               </select>
+                                               </div>
+                                        <div class="form-group has-warning">
+                                            <label class="control-label" for="inputSuccess">Title</label>
+                                            <input type="text" name="product[title]" value="{{ product.title }}" class="form-control" id="inputWarning">
+                                        </div>
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputSuccess">Keywords</label>
+                                            <input type="text" name="product[keywords]" value="{{ product.keywords }}" class="form-control" id="inputError">
+                                        </div>
+                                        <div>
+                                             <label class="control-label" for="inputSuccess">Description</label>
+                                            <input type="text" name="product[description]" value="{{ product.description }}" class="form-control" id="inputError">
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Alış Fiyatı</label>
+                                            <input type="text" name="product[price]" value="{{ product.price }}" class="form-control" id="inputError">
+                                            </div>
+                                            <div>
+                                             <label class="control-label" for="inputSuccess">Satış Fiyatı</label>
+                                            <input type="text" name="product[sprice]" value="{{ product.sprice }}" class="form-control" id="inputError">
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Miktar</label>
+                                            <input type="text" name="product[amount]" value="{{ product.amount }}" class="form-control" id="inputError">
+                                            </div>
+                                              <div>
+                                             <label class="control-label" for="inputSuccess">Detay</label>
+                                             <textarea name="product[detail]" rows="10"> {{ product.detail }}  </textarea>
+                                           
+                                            </div>
+                                            <br>
+                                            <div>
+                                             <select name="product[status]" class="form-control">
+                                                 <option>{{ product.status }}</option>
+                                                <option selected >true</option>
+                                                <option>false</option>
+                                               </select>
+                                               </div>
+                                               </div>
+                                            <br>
+                                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                                    </form>
+

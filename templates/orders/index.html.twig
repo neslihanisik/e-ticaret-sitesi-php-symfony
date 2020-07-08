@@ -1,0 +1,59 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %}Orders index{% endblock %}
+{% block sidebar %} {{ include ('home/usersidebar.html.twig') }} {% endblock %}
+
+{% block content %}
+    <h1>Orders index</h1>
+
+    <table class="table" style="width: 250px">
+        <thead>
+            <tr>
+
+
+                <th>Amount</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Phone</th>
+
+                <th>Status</th>
+                <th>Note</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+
+
+                <td>{{ order.amount }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.address }}</td>
+                <td>{{ order.city }}</td>
+                <td>{{ order.phone }}</td>
+
+                <td>{{ order.status }} </td>
+                <td>{{ order.note }}</td>
+                <td>
+                    <a href="{{ path('orders_show', {'id': order.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+
+{% endblock %}

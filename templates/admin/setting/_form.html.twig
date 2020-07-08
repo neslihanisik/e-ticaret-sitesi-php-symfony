@@ -1,0 +1,123 @@
+
+
+                                        <form role="form" method="post">
+
+
+
+                                <div class="panel-body">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                            
+                                <li><a href="#genel" data-toggle="tab">Genel bilgiler</a>
+                                </li>
+                                <li><a href="#email" data-toggle="tab">Email server bilgileri</a>
+                                </li>
+                                <li><a href="#hakkımızda" data-toggle="tab">Hakkımızda</a>
+                                </li>
+                                 <li><a href="#iletişim" data-toggle="tab">İletişim</a>
+                                </li>
+                                <!-- <li><a href="#referanslar" data-toggle="tab">Referanslar</a>
+                                </li>-->
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="genel">
+                                    <h4>Genel Bilgiler</h4>
+                                    <div class="form-group has-warning">
+                                            <label class="control-label" for="inputSuccess">Title</label>
+                                            <input type="text" name="setting[title]" value="{{ setting.title }}" class="form-control" id="inputWarning">
+                                        </div>
+                                    <div class="form-group has-error">
+                                            <label class="control-label" for="inputSuccess">Keywords</label>
+                                            <input type="text" name="setting[keywords]" value="{{ setting.keywords }}" class="form-control" id="inputError">
+                                        </div>
+                                        <div>
+                                             <label class="control-label" for="inputSuccess">Description</label>
+                                            <input type="text" name="setting[description]" value="{{ setting.description }}" class="form-control" id="inputError">
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Company</label>
+                                            <input type="text" name="setting[company]" value="{{ setting.company }}" class="form-control" id="inputError">
+                                            </div>
+                                            <div>
+                                             <label class="control-label" for="inputSuccess">Adres</label>
+                                            <input type="text" name="setting[address]" value="{{ setting.address }}" class="form-control" id="inputError">
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Fax</label>
+                                            <input type="text" name="setting[fax]" value="{{ setting.fax }}" class="form-control" id="inputError">
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Email</label>
+                                            <input type="text" name="setting[email]" value="{{ setting.email }}" class="form-control" id="inputError">
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="email">
+                                    <h4>Email Server</h4>
+                                     <div>
+                                           <!--  <label class="control-label" for="inputSuccess">Email</label>
+                                            <input type="text" name="setting[email]" value="{{ setting.email }}" class="form-control" id="inputError">-->
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Email server</label>
+                                            <input type="text" name="setting[smtpemail]" value="{{ setting.smtpemail }}" class="form-control" id="inputError">
+                                            </div>
+                                            <div>
+                                             <label class="control-label" for="inputSuccess">Email password</label>
+                                            <input type="text" name="setting[smtppassword]" value="{{ setting.smtppassword }}" class="form-control" id="inputError">
+                                            </div>
+                                            <div>
+                                             <label class="control-label" for="inputSuccess">SMTP port</label>
+                                            <input type="text" name="setting[smtpport]" value="{{ setting.smtpport }}" class="form-control" id="inputError">
+                                            </div>
+                                    </div>
+                                <div class="tab-pane fade" id="hakkımızda">
+                                    <h4>Hakkımızda</h4>
+                                     <div>
+                                             <label class="control-label" for="inputSuccess">Hakkımızda</label>
+                                             <textarea  name="setting[aboutus]" rows="10" cols="30"> {{ setting.aboutus }}  </textarea>
+                                           
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="iletişim">
+                                    <h4>İletişim</h4>
+                                    <div>
+                                             <label class="control-label" for="inputSuccess">Phone</label>
+                                            <input type="text" name="setting[phone]" value="{{ setting.phone }}" class="form-control" id="inputError">
+                                            </div>
+                                             <div>
+                                             <label class="control-label" for="inputSuccess">Contact</label>
+                                             <textarea name="setting[contact]" rows="10"> {{ setting.contact }}  </textarea>
+                                           
+                                            </div>
+                                            
+                                </div>
+                            <!--    <div class="tab-pane fade" id="referanslar">
+                                    <h4>Referanslar</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div> -->
+                            </div>
+                             
+                        </div>
+                     <button type="submit" class="btn btn-primary">Kaydet</button>
+                                    </form>
+
+                                <!--       <script>
+
+                                        ClassicEditor
+                                            .create(document.querySelector('#hakkı'))
+                                            .catch(error=>{
+                                                console.error(error);
+                                            });
+
+                                        </script> -->
+
+
+                                        
+                                        
+                                           
+                                            
+                                             
+                                           
+                    

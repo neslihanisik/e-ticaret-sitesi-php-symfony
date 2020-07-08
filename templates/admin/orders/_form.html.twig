@@ -1,0 +1,79 @@
+
+{% extends 'frontbase.html.twig' %}
+
+{% block title %} SHOPCART {% endblock %}
+
+{% block sidebar %} {{ include ('home/usersidebar.html.twig') }} {% endblock %}
+
+{% block content %}
+
+
+
+<form action="{{ path('orders_new') }}" method="post">
+
+
+    <table class="table" style="width: 200px">
+        <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Adresi</th>
+            <th>Şehri</th>
+            <th>total</th>
+
+        </tr>
+
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><input type="text" placeholder="Name" name ="orders[name]" value="{{ app.user.name }}"></td>
+                <td><input type="text" placeholder="adresi" name ="orders[address]" value="{{ app.user.address }}"></td>
+                <td><input type="text" placeholder="şehir" name ="orders[city]" value= "{{ app.user.city }}"></td>
+                <td> <input type="text" placeholder="tutar" name ="orders[amount]" value= "{{ total }}" ></td>
+
+            </tr>
+            <tr>
+                <th>Kredi bilgileri</th>
+                <th>Şifresi</th>
+                <th>Onay kodu</th>
+                <th>Banka Adı</th>
+
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="kredi bilgileri" ></td>
+                <td><input type="text" placeholder="şifresi" ></td>
+                <td><input type="password" placeholder="onay kodu"  ></td>
+                <td> <input type="text" placeholder="banka adı"   ></td>
+
+            </tr>
+
+
+        </tbody>
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+    <input type="hidden" name="token" value="{{ csrf_token('form-order') }}" />
+    <button type="submit" class="btn btn-success">Satın al</button>
+
+
+</form>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+
+{% endblock %}

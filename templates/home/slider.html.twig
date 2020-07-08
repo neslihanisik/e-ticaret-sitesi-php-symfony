@@ -1,0 +1,66 @@
+<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+						
+						
+
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1><span>{{ data[0].title }}</span></h1>
+									<h2>SON KİTAPLAR</h2>
+									<p>SON ÇIKAN KİTAPLARA SAHİP OLUN </p>
+
+								</div>
+								<div class="col-sm-6">
+									<img src="{{asset('uploads')}}/images/{{'indir.jpg'}}" alt="">
+								</div>
+							</div>
+							
+
+
+								{% for rs in sliders %}
+
+							<div class="item" >
+								<div class="col-sm-6">
+									<h1>Fiyat: {{rs.sprice}}</h1>
+									<h2>{{rs.title}}</h2>
+									<p>{{ rs.description }} </p>
+									<a href="{{ path('product_detail',{'id':rs.id}) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div class="col-sm-6">
+								<a href="{{ path('product_detail',{'id':rs.id}) }}">
+									<img src="{{asset('uploads')}}/images/{{rs.image}}" alt="">
+									</a>
+								</div>
+							</div>
+							
+
+							{% endfor %}
+
+
+							
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->

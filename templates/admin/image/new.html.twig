@@ -1,0 +1,18 @@
+
+
+
+    <h1>Add new Image to Gallery</h1>
+
+    {{ include('admin/image/_form.html.twig') }}
+
+ {% for image in imagelist %}
+
+     <img src="{{ asset('uploads') }}/images/{{ image.image }} ">
+
+        <a href="{{ path('admin_image_delete',{'id': image.id,'pid': image.productId}) }}" onclick="return confirm('eminmisiniz?');"class="fg-button"> sil</a>
+
+     {% endfor %}
+
+    
+    
+

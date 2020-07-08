@@ -1,0 +1,80 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}PRODUCT EKLE{% endblock %}
+
+
+{% block body %}
+
+    {% block all %} {{ include ('admin/all.html.twig') }} {% endblock %}
+
+  <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">PRODUCT EKLE</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           PRODUCT EKLE
+                           
+                        </div>
+                        <!-- /.panel-heading -->
+                        
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+    {{ include('admin/product/_form.html.twig') }}
+
+    <a href="{{ path('admin_product_index') }}">back to list</a>
+</div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+               
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="{{asset('admin')}}/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('admin')}}/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{{asset('admin')}}/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="{{asset('admin')}}/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('admin')}}/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="{{asset('admin')}}/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{asset('admin')}}/dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block title %} HAKKIMIZDA {{ data[0].title }} {% endblock %}
+{% block keywords %} {{ data[0].keywords }} {% endblock %}
+{% block description %} {{ data[0].description }} {% endblock %}
+
+{% block content %}
+
+
+    <h1 style="margin-left: 640px"> HAKKIMIZDA </h1>
+<div  style="width:500px; margin-left: 600px;height: 300px">
+
+    <p>{{ data[0].aboutus }}</p>
+</div>
+
+{% endblock %}
